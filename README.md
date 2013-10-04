@@ -34,7 +34,14 @@ in the ledger:
 ## TODO
 
 * Multi-legged transactions support
+* Currency converting transactions
 
+## Dependencies
+
+Accounting is Rails 4 engine. All models are based on ActiveRecord.
+
+[Money](https://github.com/RubyMoney/money) is used for handling monetary 
+values.
 
 ## Issues
 
