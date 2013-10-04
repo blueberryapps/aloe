@@ -2,3 +2,4 @@
 log/*.log
 pkg/
 spec/dummy/log/*
+spec/dummy/db/*.sqlite3
