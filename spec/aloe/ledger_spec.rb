@@ -12,6 +12,10 @@ describe Aloe::Ledger, unit: true do
       subject.account_scope = account_scope
     end
 
+    after do
+      subject.account_scope = nil
+    end
+
     context "an account exists" do
       let(:user)    { mock_model "User" }
       let(:account) { double "Account" }
@@ -47,6 +51,10 @@ describe Aloe::Ledger, unit: true do
 
     before do
       subject.account_scope = account_scope
+    end
+
+    after do
+      subject.account_scope = nil
     end
 
     let(:user)     { mock_model "User" }
