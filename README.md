@@ -1,17 +1,18 @@
-# Accounting gem
+# Aloe gem
 
-Accouning is Ruby gem that provides double-entry bookkeeping infrastructure 
-for Rails.
+Aloe is Ruby gem that provides double-entry bookkeeping infrastructure
+for Rails. The name of gem is derived from fundamental accounting equation 
+A = L + OE.
 
 ## Instalation
 
-Add accounting gem into your Gemfile:
+Add aloe gem into your Gemfile:
 
-    gem 'accounting'
+    gem 'aloe'
 
 Generate the migration:
 
-    rails generate accounting
+    rails generate aloe
 
 Then run the migrations:
 
@@ -23,13 +24,13 @@ Each account must name, owner or both. Owner is an entity in your application,
 for example following piece of code returns account belonging to the user:
 
     user = User.first
-    account = Accounting::Ledger.find_account(user, :USD)
+    account = Aloe::Ledger.find_account(user, :USD)
 
 Moving money from one account to another is accomplished by creating an entry
 in the ledger:
 
     amount = Money.new(500, :USD)
-    Accounting::Ledger.create_entry money, from: debit_account, to: credit_accoun,
+    Aloe::Ledger.create_entry money, from: debit_account, to: credit_accoun,
 
 ## TODO
 
@@ -38,7 +39,7 @@ in the ledger:
 
 ## Dependencies
 
-Accounting is Rails 4 engine. All models are based on ActiveRecord.
+Aloe is Rails 4 engine. All models are based on ActiveRecord.
 
 [Money](https://github.com/RubyMoney/money) is used for handling monetary 
 values.
@@ -46,9 +47,9 @@ values.
 ## Issues
 
 If you have problems, please create a
-[Github Issue](https://github.com/blueberryapps/accounting/issues).
+[Github Issue](https://github.com/blueberryapps/aloe/issues).
 
 ## License
 
-Accounting is Copyright © 2013 Blueberry.cz Apps s.r.o. It is free software, 
+Aloe is Copyright © 2013 Blueberry.cz Apps s.r.o. It is free software, 
 and may be redistributed under the terms specified in the LICENSE file.

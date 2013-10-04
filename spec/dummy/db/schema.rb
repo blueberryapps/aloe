@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20131003203647) do
 
-  create_table "accounting_accounts", force: true do |t|
+  create_table "aloe_accounts", force: true do |t|
     t.string   "name"
     t.string   "currency",      limit: 3
     t.string   "state"
@@ -25,18 +25,18 @@ ActiveRecord::Schema.define(version: 20131003203647) do
     t.datetime "updated_at"
   end
 
-  add_index "accounting_accounts", ["owner_id", "owner_type"], name: "index_accounting_accounts_on_owner_id_and_owner_type"
+  add_index "aloe_accounts", ["owner_id", "owner_type"], name: "index_aloe_accounts_on_owner_id_and_owner_type"
 
-  create_table "accounting_entries", force: true do |t|
+  create_table "aloe_entries", force: true do |t|
     t.integer  "amount"
     t.integer  "account_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "accounting_entries", ["account_id"], name: "index_accounting_entries_on_account_id"
+  add_index "aloe_entries", ["account_id"], name: "index_aloe_entries_on_account_id"
 
-  create_table "accounting_transactions", force: true do |t|
+  create_table "aloe_transactions", force: true do |t|
     t.string   "uuid"
     t.string   "category"
     t.string   "code"
@@ -49,11 +49,11 @@ ActiveRecord::Schema.define(version: 20131003203647) do
     t.datetime "updated_at"
   end
 
-  add_index "accounting_transactions", ["adjustment_transaction_id"], name: "index_accounting_transactions_on_adjustment_transaction_id"
-  add_index "accounting_transactions", ["category"], name: "index_accounting_transactions_on_category"
-  add_index "accounting_transactions", ["credit_entry_id"], name: "index_accounting_transactions_on_credit_entry_id"
-  add_index "accounting_transactions", ["debit_entry_id"], name: "index_accounting_transactions_on_debit_entry_id"
-  add_index "accounting_transactions", ["uuid"], name: "index_accounting_transactions_on_uuid"
+  add_index "aloe_transactions", ["adjustment_transaction_id"], name: "index_aloe_transactions_on_adjustment_transaction_id"
+  add_index "aloe_transactions", ["category"], name: "index_aloe_transactions_on_category"
+  add_index "aloe_transactions", ["credit_entry_id"], name: "index_aloe_transactions_on_credit_entry_id"
+  add_index "aloe_transactions", ["debit_entry_id"], name: "index_aloe_transactions_on_debit_entry_id"
+  add_index "aloe_transactions", ["uuid"], name: "index_aloe_transactions_on_uuid"
 
   create_table "users", force: true do |t|
     t.datetime "created_at"
