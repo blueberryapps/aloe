@@ -1,5 +1,7 @@
 # Aloe gem
 
+[![Build Status](https://api.travis-ci.org/blueberryapps/aloe.png?branch=master)](http://travis-ci.org/blueberryapps/aloe)
+
 Aloe is Ruby gem that provides double-entry bookkeeping infrastructure
 for Rails. The name of gem is derived from fundamental accounting equation 
 A = L + OE.
