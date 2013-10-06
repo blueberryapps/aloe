@@ -8,10 +8,11 @@ Gem::Specification.new do |s|
   s.name        = "aloe"
   s.version     = Aloe::VERSION
   s.authors     = ["Jiri Zajpt"]
+  s.licenses    = ["LICENSE"]
   s.email       = ["jzajpt@blueberry.cz"]
   s.homepage    = "https://github.com/blueberryapps/aloe"
-  s.summary     = "TODO: Summary of Aloe."
-  s.description = "TODO: Description of Aloe."
+  s.summary     = "Aloe is double-entry bookkeeping engine for Rails apps"
+  s.description = "Aloe is double-entry bookkeeping engine for Rails apps"
 
   s.files = Dir["{app,config,db,lib}/**/*", "LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["spec/**/*"]
